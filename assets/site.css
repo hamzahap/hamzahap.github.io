@@ -405,6 +405,10 @@ code {
   margin-top: 0;
 }
 
+.content h2:not(:first-child) {
+  margin-top: 36px;
+}
+
 .content ul {
   margin: 14px 0 24px;
   padding-left: 20px;
