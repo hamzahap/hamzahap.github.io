@@ -201,6 +201,17 @@ code {
   color: transparent;
 }
 
+.brand-break {
+  color: var(--text);
+}
+
+.brand-line {
+  background: linear-gradient(135deg, var(--coral), var(--gold), var(--aqua));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .phone-stack {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -360,6 +371,114 @@ code {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.78rem;
+}
+
+.breakline-track {
+  position: relative;
+  height: 196px;
+  margin: 18px 0 14px;
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 28% 18%, rgba(255, 213, 142, 0.2), transparent 24%),
+    radial-gradient(circle at 76% 20%, rgba(255, 125, 97, 0.22), transparent 28%),
+    linear-gradient(180deg, rgba(11, 18, 33, 0.94), rgba(23, 14, 20, 0.94));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.breakline-track::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.track-horizon {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 54px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 243, 219, 0.9), rgba(122, 245, 210, 0.7));
+  box-shadow: 0 0 24px rgba(122, 245, 210, 0.14);
+}
+
+.track-player,
+.track-orb,
+.track-saw,
+.track-spike {
+  position: absolute;
+}
+
+.track-player {
+  width: 22px;
+  height: 22px;
+  left: 54px;
+  bottom: 62px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--gold), #fff3db);
+  box-shadow: 0 0 18px rgba(255, 213, 142, 0.32);
+  transform: rotate(12deg);
+}
+
+.track-orb {
+  width: 18px;
+  height: 18px;
+  right: 88px;
+  bottom: 102px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff, var(--aqua) 60%, rgba(88, 230, 255, 0.32) 100%);
+  box-shadow: 0 0 20px rgba(88, 230, 255, 0.32);
+}
+
+.track-saw {
+  width: 34px;
+  height: 34px;
+  left: 50%;
+  bottom: 66px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 125, 97, 0.88);
+  box-shadow: 0 0 0 4px rgba(255, 125, 97, 0.12);
+  transform: translateX(-50%);
+}
+
+.track-saw::before,
+.track-saw::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 243, 219, 0.56);
+}
+
+.track-saw::after {
+  inset: 12px;
+  background: rgba(255, 125, 97, 0.16);
+  border: 0;
+}
+
+.track-spike {
+  width: 0;
+  height: 0;
+  bottom: 62px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 24px solid var(--coral);
+  filter: drop-shadow(0 0 12px rgba(255, 125, 97, 0.28));
+}
+
+.track-spike.one {
+  left: 118px;
+}
+
+.track-spike.two {
+  left: 148px;
+}
+
+.track-spike.three {
+  right: 118px;
 }
 
 .grid {
